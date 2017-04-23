@@ -27,4 +27,6 @@ class Person < ApplicationRecord
     	record.errors.add(attr, 'não é válido') unless CpfUtils.cpf_valido? value
   	end
 	validates :birth, presence: true
+
+	resourcify
 end

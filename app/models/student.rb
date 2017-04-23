@@ -33,4 +33,6 @@ class Student < ApplicationRecord
 	accepts_nested_attributes_for :student_events
 
 	paginates_per 5
+
+  resourcify
 end

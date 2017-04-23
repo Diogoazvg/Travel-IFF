@@ -20,4 +20,6 @@ class Travel < ApplicationRecord
 	validates :description, presence: true
 
 	paginates_per 5
+
+  resourcify
 end

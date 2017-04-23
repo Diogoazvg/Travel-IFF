@@ -31,4 +31,6 @@ class Vehicle < ApplicationRecord
 	end
 
 	paginates_per 5
+
+	resourcify
 end
