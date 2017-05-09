@@ -5,10 +5,10 @@
 
   Faker::Config.locale = 'pt-BR'
 
-  desc "Criação do usuario admin"
+  desc "Create user admin"
   task criar_admin: :environment do
     # Usuário para testes
-    Usuario.create(
+    User.create(
       email: 'admin@teste.com',
       password: '*d10g0oi7i',
       password_confirmation: '*d10g0oi7i',
