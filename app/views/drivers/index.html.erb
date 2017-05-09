@@ -2,9 +2,9 @@
   <h1>
     <%= t('Listing Drivers') %> (<%= @drivers.count %>)  <small><%= @driver %></small>
     <div class='pull-right'>
-      <%= link_to new_driver_path(), class: 'btn btn-info' do %>
-        <i class='glyphicon glyphicon-plus'></i> <%= t('New Driver') %>
-      <% end %>
+      <!--%= link_to new_driver_path(), class: 'btn btn-info' do %-->
+        <!--i class='glyphicon glyphicon-plus'></i> <!--%= t('New Driver') %-->
+      <!--% end %-->
     </div>
   </h1>
 </div>
@@ -24,8 +24,8 @@
         <td><%= driver.person.name %></td>
       <td class='actions text-center'>
         <%= link_to t('Show'), driver_path(driver), class: 'btn btn-sm btn-info' %>
-        <%= link_to t('Edit'), edit_driver_path(driver), class: 'btn btn-sm btn-warning' %>
-        <%= link_to t('Destroy'), driver_path(driver), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %>
+        <!--%= link_to t('Edit'), edit_driver_path(driver), class: 'btn btn-sm btn-warning' %-->
+        <!--%= link_to t('Destroy'), driver_path(driver), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %-->
       </td>
     </tr>
     <% end %>

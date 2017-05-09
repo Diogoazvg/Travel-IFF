@@ -13,7 +13,7 @@ class BusCompany < ApplicationRecord
 	has_many :vehicles
 
 	validates :cnpj, presence: true
-	validates :cnpj, numericality: true
+	#validates :cnpj, numericality: true
 	validates :cnpj, uniqueness: true
 	validates_each :cnpj do |record, attr, value|
     	record.errors.add(attr, 'não é válido') unless CnpjUtils.cnpj_valido? value

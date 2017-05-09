@@ -1,0 +1,42 @@
+<div class='page-header'>
+  <h1>
+    <%= t('Listing Admin::Vehicles') %> (<%= @count_admin_vehicles %>)  <small><%= @admin_vehicle %></small>
+    <div class='pull-right'>
+      <%= link_to new_admin_vehicle_path(), class: 'btn btn-info' do %>
+        <i class='glyphicon glyphicon-plus'></i> <%= t('New Admin::Vehicle') %>
+      <% end %>
+    </div>
+  </h1>
+</div>
+
+<table class='table table-responsive table-hover table-stripped' id='admin_vehicles'>
+  <thead>
+  <tr>
+      <th>Seat</th>
+      <th>Price</th>
+      <th>OrderNumber</th>
+      <th>Travel</th>
+      <th>BusCompany</th>
+    <th></th>
+  </tr>
+
+  </thead>
+
+  <tbody>
+    <% @admin_vehicles.each do |admin_vehicle| %>
+    <tr>
+        <td><%= admin_vehicle.seat %></td>
+        <td><%= admin_vehicle.price %></td>
+        <td><%= admin_vehicle.order_number %></td>
+        <td><%= admin_vehicle.travel %></td>
+        <td><%= admin_vehicle.bus_company %></td>
+      <td class='actions text-center'>
+        <%= link_to t('Show'), admin_vehicle_path(admin_vehicle), class: 'btn btn-sm btn-info' %>
+        <%= link_to t('Edit'), edit_admin_vehicle_path(admin_vehicle), class: 'btn btn-sm btn-warning' %>
+        <%= link_to t('Destroy'), admin_vehicle_path(admin_vehicle), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<!--%%= paginate @admin_vehicles %-->

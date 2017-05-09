@@ -2,9 +2,9 @@
   <h1>
     <%= t('Listing Events') %> (<%= @events.count %>)  <small><%= @event %></small>
     <div class='pull-right'>
-      <%= link_to new_event_path(), class: 'btn btn-info' do %>
-        <i class='glyphicon glyphicon-plus'></i> <%= t('New Event') %>
-      <% end %>
+      <!--%= link_to new_event_path(), class: 'btn btn-info' do %-->
+        <!--i class='glyphicon glyphicon-plus'></i--> <!--%= t('New Event') %-->
+      <!--% end %-->
     </div>
   </h1>
 </div>
@@ -26,8 +26,8 @@
         <td><%= event.day %></td>
       <td class='actions text-center'>
         <%= link_to t('Show'), event_path(event), class: 'btn btn-sm btn-info' %>
-        <%= link_to t('Edit'), edit_event_path(event), class: 'btn btn-sm btn-warning' %>
-        <%= link_to t('Destroy'), event_path(event), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %>
+        <!--%= link_to t('Edit'), edit_event_path(event), class: 'btn btn-sm btn-warning' %-->
+        <!--%= link_to t('Destroy'), event_path(event), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %-->
       </td>
     </tr>
     <% end %>

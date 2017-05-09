@@ -9,37 +9,83 @@
             <ul id="menu-content" class="menu-content collapse out">
                 <li>
                   <a>
-                    <i><%= link_to t("Travels"), travels_path, class: 'fa fa-plane fa-lg' %></i>
+                    <i>
+                      <% if current_user.try(:admin?) %>
+                        <%= link_to t("Travels"), admin_travels_path, class: 'fa fa-plane fa-lg' %>
+                      <% else %>
+                        <%= link_to t("Travels"), travels_path, class: 'fa fa-plane fa-lg' %>
+                      <% end %>                        
+                    </i>
                   </a>
                 </li>
 
                  <li>
                   <a>
-                    <i><%= link_to t("Events"), events_path, class: 'fa fa-suitcase fa-lg' %></i>
+                    <i>
+                      <% if current_user.try(:admin?) %>
+                        <%= link_to t("Events"), admin_events_path, class: 'fa fa-suitcase fa-lg' %>
+                      <% else %>
+                        <%= link_to t("Events"), events_path, class: 'fa fa-suitcase fa-lg' %>
+                      <% end %>
+                    </i>
                   </a>
                   </li>
 
                  <li>
                   <a>
-                    <i><%= link_to t("Students"), students_path, class: 'fa fa-users fa-lg' %></i>
+                    <i>
+                      <% if current_user.try(:admin?) %>
+                        <%= link_to t("Students"), admin_students_path, class: 'fa fa-users fa-lg' %>
+                      <% else %>
+                        <%= link_to t("Students"), students_path, class: 'fa fa-users fa-lg' %>
+                      <% end %>
+                    </i>
                   </a>
                 </li>
 
                 <li>
                   <a>
-                  <i><%= link_to t("Drivers"), drivers_path, class: 'fa fa-dashboard fa-lg' %></i>
+                  <i>
+                    <% if current_user.try(:admin?) %>
+                      <%= link_to t("Drivers"), admin_drivers_path, class: 'fa fa-dashboard fa-lg' %>
+                    <% else %>
+                      <%= link_to t("Drivers"), drivers_path, class: 'fa fa-dashboard fa-lg' %>
+                    <% end %>
+                  </i>
                   </a>
                 </li>
 
                 <li>
                   <a>
-                    <i><%= link_to t("Vehicle"), vehicles_path, class: 'fa fa-bus fa-lg' %></i>
+                    <i>
+                      <% if current_user.try(:admin?) %>
+                        <%= link_to t("Vehicle"), admin_vehicles_path, class: 'fa fa-bus fa-lg' %>
+                      <% else %>
+                        <%= link_to t("Vehicle"), vehicles_path, class: 'fa fa-bus fa-lg' %>
+                      <% end %>
+                    </i>
                   </a>
                 </li>
 
                 <li>
                   <a>
-                    <i><%= link_to t("Bus Company"), bus_companies_path, class: 'fa fa-building-o fa-lg' %></i>
+                    <i>
+                      <% if current_user.try(:admin?) %>
+                        <%= link_to t("Bus Company"), admin_bus_companies_path, class: 'fa fa-building-o fa-lg' %>
+                      <% else %>
+                        <%= link_to t("Bus Company"), bus_companies_path, class: 'fa fa-building-o fa-lg' %>
+                      <% end %>
+                    </i>
+                  </a>
+                </li>
+
+                <li>
+                  <a>
+                    <i>
+                      <% if current_user.try(:admin?) %>
+                        <%= link_to t(" Usuários"), users_path, class: 'fa fa-building-o fa-lg' %>
+                      <% end %>
+                    </i>
                   </a>
                 </li>
             </ul>

@@ -1,0 +1,40 @@
+<div class='page-header'>
+  <h1>
+    <%= t('Listing Admin::Events') %> (<%= @count_admin_events %>)  <small><%= @admin_event %></small>
+    <div class='pull-right'>
+      <%= link_to new_admin_event_path(), class: 'btn btn-info' do %>
+        <i class='glyphicon glyphicon-plus'></i> <%= t('New Admin::Event') %>
+      <% end %>
+    </div>
+  </h1>
+</div>
+
+<table class='table table-responsive table-hover table-stripped' id='admin_events'>
+  <thead>
+  <tr>
+      <th>Name</th>
+      <th>Day</th>
+      <th>Descrption</th>
+      <th>Travel</th>
+    <th></th>
+  </tr>
+
+  </thead>
+
+  <tbody>
+    <% @admin_events.each do |admin_event| %>
+    <tr>
+        <td><%= admin_event.name %></td>
+        <td><%= admin_event.day %></td>
+        <td><%= admin_event.descrption %></td>
+        <td><%= admin_event.travel %></td>
+      <td class='actions text-center'>
+        <%= link_to t('Show'), admin_event_path(admin_event), class: 'btn btn-sm btn-info' %>
+        <%= link_to t('Edit'), edit_admin_event_path(admin_event), class: 'btn btn-sm btn-warning' %>
+        <%= link_to t('Destroy'), admin_event_path(admin_event), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<!--%%= paginate @admin_events %-->

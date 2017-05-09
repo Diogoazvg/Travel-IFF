@@ -1,0 +1,36 @@
+<div class='page-header'>
+  <h1>
+    <%= t('Listing Users') %> (<%= @count_users %>)  <small><%= @user %></small>
+    <div class='pull-right'>
+      <%= link_to new_user_path(), class: 'btn btn-info' do %>
+        <i class='glyphicon glyphicon-plus'></i> <%= t('New User') %>
+      <% end %>
+    </div>
+  </h1>
+</div>
+
+<table class='table table-responsive table-hover table-stripped' id='users'>
+  <thead>
+  <tr>
+      <th>Admin</th>
+      <th>Email</th>
+    <th></th>
+  </tr>
+
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+        <td><%= user.admin %></td>
+        <td><%= user.email %></td>
+      <td class='actions text-center'>
+        <%= link_to t('Show'), user_path(user), class: 'btn btn-sm btn-info' %>
+        <%= link_to t('Edit'), edit_user_path(user), class: 'btn btn-sm btn-warning' %>
+        <%= link_to t('Destroy'), user_path(user), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<!--%%= paginate @users %-->

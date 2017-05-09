@@ -1,0 +1,34 @@
+<div class='page-header'>
+  <h1>
+    <%= t('Admin::event Info') %>
+    <div class='pull-right'>
+      <%= link_to edit_admin_event_path(@admin_event), class: 'btn btn-info' do %>
+        <i class='glyphicon glyphicon-pencil'></i> <%= t('Edit') %>
+      <% end %>
+      <%= link_to admin_events_path, class: 'btn btn-warning' do %>
+        <i class='glyphicon glyphicon-backward'></i> <%= t('Back') %>
+      <% end %>
+    </div>
+  </h1>
+</div>
+
+<div class='panel panel-default'>
+  <div class='panel-body'>
+    <p>
+      <strong>Name</strong>
+      <%= @admin_event.name %>
+    </p>
+    <p>
+      <strong>Day</strong>
+      <%= @admin_event.day %>
+    </p>
+    <p>
+      <strong>Descrption</strong>
+      <%= @admin_event.descrption %>
+    </p>
+    <p>
+      <strong>Travel</strong>
+      <%= @admin_event.travel %>
+    </p>
+  </div>
+</div>

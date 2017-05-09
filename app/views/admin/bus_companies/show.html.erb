@@ -1,0 +1,26 @@
+<div class='page-header'>
+  <h1>
+    <%= t('Admin::buscompany Info') %>
+    <div class='pull-right'>
+      <%= link_to edit_admin_bus_company_path(@admin_bus_company), class: 'btn btn-info' do %>
+        <i class='glyphicon glyphicon-pencil'></i> <%= t('Edit') %>
+      <% end %>
+      <%= link_to admin_bus_companies_path, class: 'btn btn-warning' do %>
+        <i class='glyphicon glyphicon-backward'></i> <%= t('Back') %>
+      <% end %>
+    </div>
+  </h1>
+</div>
+
+<div class='panel panel-default'>
+  <div class='panel-body'>
+    <p>
+      <strong>Cnpj</strong>
+      <%= @admin_bus_company.cnpj %>
+    </p>
+    <p>
+      <strong>Name</strong>
+      <%= @admin_bus_company.name %>
+    </p>
+  </div>
+</div>

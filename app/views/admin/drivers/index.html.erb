@@ -1,0 +1,40 @@
+<div class='page-header'>
+  <h1>
+    <%= t('Listing Admin::Drivers') %> (<%= @count_admin_drivers %>)  <small><%= @admin_driver %></small>
+    <div class='pull-right'>
+      <%= link_to new_admin_driver_path(), class: 'btn btn-info' do %>
+        <i class='glyphicon glyphicon-plus'></i> <%= t('New Admin::Driver') %>
+      <% end %>
+    </div>
+  </h1>
+</div>
+
+<table class='table table-responsive table-hover table-stripped' id='admin_drivers'>
+  <thead>
+  <tr>
+      <th>Cnh</th>
+      <th>Category</th>
+      <th>Person</th>
+      <th>Vehicle</th>
+    <th></th>
+  </tr>
+
+  </thead>
+
+  <tbody>
+    <% @admin_drivers.each do |admin_driver| %>
+    <tr>
+        <td><%= admin_driver.cnh %></td>
+        <td><%= admin_driver.category %></td>
+        <td><%= admin_driver.person %></td>
+        <td><%= admin_driver.vehicle %></td>
+      <td class='actions text-center'>
+        <%= link_to t('Show'), admin_driver_path(admin_driver), class: 'btn btn-sm btn-info' %>
+        <%= link_to t('Edit'), edit_admin_driver_path(admin_driver), class: 'btn btn-sm btn-warning' %>
+        <%= link_to t('Destroy'), admin_driver_path(admin_driver), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<!--%%= paginate @admin_drivers %-->

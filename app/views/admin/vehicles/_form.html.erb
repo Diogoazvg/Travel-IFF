@@ -1,0 +1,21 @@
+<%= simple_form_for @admin_vehicle, wrapper: :horizontal_form do |f| %>
+  <%= f.error_notification %>
+<div class="form-horizontal col-sm-offset-1 col-sm-7">
+  <div class="panel panel-info">
+  <div class="panel-heading ">Table_name</div>
+    <div class="panel-body">
+      <div class="form-inputs">
+          <%= f.input :seat %>
+          <%= f.input :price %>
+          <%= f.input :order_number %>
+          <%= f.association :travel %>
+          <%= f.association :bus_company %>
+      </div>
+
+      <div class="form-actions">
+          <%= f.button :submit, class: "btn btn-info" %>
+      </div>
+    </div>  
+  </div>
+</div>     
+<% end %>

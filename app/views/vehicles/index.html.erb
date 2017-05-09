@@ -2,9 +2,9 @@
   <h1>
     <%= t('Listing Vehicles') %> (<%= @vehicles.count %>)  <small><%= @vehicle %></small>
     <div class='pull-right'>
-      <%= link_to new_vehicle_path(), class: 'btn btn-info' do %>
-        <i class='glyphicon glyphicon-plus'></i> <%= t('New Vehicle') %>
-      <% end %>
+      <!--%= link_to new_vehicle_path(), class: 'btn btn-info' do %-->
+        <!--i class='glyphicon glyphicon-plus'></i--> <!--%= t('New Vehicle') %-->
+      <!--% end %-->
     </div>
   </h1>
 </div>
@@ -28,8 +28,8 @@
         <td><%= vehicle.price %></td>
       <td class='actions text-center'>
         <%= link_to t('Show'), vehicle_path(vehicle), class: 'btn btn-sm btn-info' %>
-        <%= link_to t('Edit'), edit_vehicle_path(vehicle), class: 'btn btn-sm btn-warning' %>
-        <%= link_to t('Destroy'), vehicle_path(vehicle), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %>
+        <!--%= link_to t('Edit'), edit_vehicle_path(vehicle), class: 'btn btn-sm btn-warning' %-->
+        <!--%= link_to t('Destroy'), vehicle_path(vehicle), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %-->
       </td>
     </tr>
     <% end %>

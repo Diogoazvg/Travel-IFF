@@ -2,9 +2,9 @@
   <h1>
     <%= t('Listing BusCompanies') %> (<%= @bus_companies.count %>)  <small><%= @bus_company %></small>
     <div class='pull-right'>
-      <%= link_to new_bus_company_path(), class: 'btn btn-info' do %>
-        <i class='glyphicon glyphicon-plus'></i> <%= t('New BusCompany') %>
-      <% end %>
+      <!--%= link_to new_bus_company_path(), class: 'btn btn-info' do %-->
+        <!--i class='glyphicon glyphicon-plus'></i--> <!--%= t('New BusCompany') %-->
+      <!--% end %-->
     </div>
   </h1>
 </div>
@@ -26,8 +26,6 @@
         <td><%= bus_company.name %></td>
       <td class='actions text-center'>
         <%= link_to t('Show'), bus_company_path(bus_company), class: 'btn btn-sm btn-info' %>
-        <%= link_to t('Edit'), edit_bus_company_path(bus_company), class: 'btn btn-sm btn-warning' %>
-        <%= link_to t('Destroy'), bus_company_path(bus_company), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %>
       </td>
     </tr>
     <% end %>
