@@ -10,8 +10,8 @@
     # Usuário para testes
     User.create(
       email: 'admin@teste.com',
-      password: '*d10g0oi7i',
-      password_confirmation: '*d10g0oi7i',
+      password: '12345678',
+      password_confirmation: '12345678',
       # nome: 'Sr. Teste',
       confirmed_at: DateTime.now,
       admin: true

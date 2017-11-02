@@ -14,20 +14,7 @@
       </div>       
   </div>
 
-  <div class='page-header table table-responsive table-hover table-stripped' >
-    <h1>
-      <%= t('Listing Travels') %> (<%= @travels.count %>)  <small><%= @travel %></small>
-      <!--% if can? :admin, @travel %-->
-        <!-- <div class='pull-right'>
-          <%= link_to new_travel_path(), class: 'btn btn-info' do %>
-            <i class='glyphicon glyphicon-plus'></i> <%= t('New Travel') %>
-          <% end %>
-        </div> -->
-      <!--% end %-->
-    </h1>
-  </div>
-
-  <table class='table table-responsive table-hover table-stripped' id='travels'>
+  <table class='table table-responsive table-hove table-stripped' id='travels'>
     <thead>
     <tr>
         <th><%=t("Name")%></th>

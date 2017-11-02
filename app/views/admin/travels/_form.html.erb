@@ -1,4 +1,4 @@
-<%= simple_form_for @admin_travel, wrapper: :horizontal_form do |f| %>
+<%= simple_form_for [:admin, @admin_travel], wrapper: :horizontal_form do |f| %>
   <%= f.error_notification %>
 <div class="form-horizontal col-sm-offset-1 col-sm-7">
   <div class="panel panel-info">
@@ -7,7 +7,7 @@
       <div class="form-inputs">
           <%= f.input :name %>
           <%= f.input :description %>
-          <%= f.input :day %>
+          <%= f.input :day, input_html: { date: "daterange" }, as: :string %>
       </div>
 
       <div class="form-actions">

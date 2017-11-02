@@ -14,9 +14,10 @@
 //= require jquery_ujs
 //= require_tree .
 //= require bootstrap-datepicker
-//= require bootstrap
 //= require bootstrap-datepicker-rails
 //= require jquery.inputmask
 //= require jquery.inputmask.extensions
 //= require jquery.inputmask.numeric.extensions
 //= require jquery.inputmask.date.extensions
+//= require moment
+//= require daterangepicker

@@ -33,7 +33,7 @@ class Admin::TravelsController < AdminController
         format.html { redirect_to @admin_travel, notice: 'Travel was successfully created.' }
         format.json { render :show, status: :created, location: @admin_travel }
       else
-        format.html { render :new }
+        format.html { render new_admin_travel_path }
         format.json { render json: @admin_travel.errors, status: :unprocessable_entity }
       end
     end
@@ -71,6 +71,6 @@ class Admin::TravelsController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_travel_params
-      params.require(:admin_travel).permit(:name, :description, :day)
+      params.require(:travel).permit(:name, :description, :day)
     end
 end
