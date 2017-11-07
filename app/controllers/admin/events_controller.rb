@@ -69,6 +69,6 @@ class Admin::EventsController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_event_params
-      params.require(:admin_event).permit(:name, :day, :descrption, :travel_id)
+      params.require(:event).permit(:name, :day, :description, :travel_id)
     end
 end

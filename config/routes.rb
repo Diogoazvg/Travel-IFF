@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :bus_companies, except: [:edit]
   resources :vehicles, except: [:edit]
   resources :travels, only: [:show, :index]
-  resources :events, except: [:edit]
+  resources :events, only: [:show, :index]
   resources :students, except: [:edit]
   resources :drivers, except: [:edit]
   resources :users
