@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :vehicles, except: [:edit]
   resources :travels, only: [:show, :index]
   resources :events, only: [:show, :index]
-  resources :students, except: [:edit]
+  resources :students, only: [:show, :index]
   resources :drivers, except: [:edit]
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
