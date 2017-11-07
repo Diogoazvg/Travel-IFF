@@ -25,5 +25,5 @@ class Driver < ApplicationRecord
 	accepts_nested_attributes_for :person
 
 	paginates_per 5
-	resourcify
+	#resourcify
 end

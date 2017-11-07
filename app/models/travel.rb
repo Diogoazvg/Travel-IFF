@@ -11,7 +11,7 @@
 #
 
 class Travel < ApplicationRecord
-	has_many :events
+	has_many :events, :dependent => :destroy
 	has_many :vehicles
 
 	validates :name, presence: true

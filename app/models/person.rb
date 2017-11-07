@@ -28,5 +28,5 @@ class Person < ApplicationRecord
   	end
 	validates :birth, presence: true
 
-	resourcify
+	#resourcify
 end

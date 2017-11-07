@@ -22,5 +22,5 @@ class BusCompany < ApplicationRecord
 	validates :name, uniqueness: true
 
 	paginates_per 5
-	resourcify
+	#resourcify
 end
