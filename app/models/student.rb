@@ -14,7 +14,7 @@
 
 class Student < ApplicationRecord
 	belongs_to :person, inverse_of: :students
-	belongs_to :event
+	#belongs_to :event
 	has_many :student_events
 	has_many :events, through: :student_events
 
@@ -33,6 +33,9 @@ class Student < ApplicationRecord
 	accepts_nested_attributes_for :student_events
 
 	paginates_per 5
-
+  
+  def to_s
+    "#{self.person.name}"
+  end
   #resourcify
 end

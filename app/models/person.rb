@@ -16,6 +16,7 @@
 class Person < ApplicationRecord
 	has_many :drivers, inverse_of: :person
 	has_many :students, inverse_of: :person
+	accepts_nested_attributes_for :students
 
 	validates :name, presence: true
 	validates :phone, presence: true

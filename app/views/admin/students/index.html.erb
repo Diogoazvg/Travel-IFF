@@ -12,11 +12,12 @@
 <table class='table table-responsive table-hover table-stripped' id='admin_students'>
   <thead>
   <tr>
-      <th>RegistrationFileName</th>
-      <th>RegistrationContentType</th>
-      <th>RegistrationFileSize</th>
-      <th>RegistrationUpdatedAt</th>
-      <th>Person</th>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Endereço</th>
+      <th>Identidade</th>
+      <th>CPF</th>
+      <th>Nascimento</th>
     <th></th>
   </tr>
 
@@ -25,11 +26,12 @@
   <tbody>
     <% @admin_students.each do |admin_student| %>
     <tr>
-        <td><%= admin_student.registration_file_name %></td>
-        <td><%= admin_student.registration_content_type %></td>
-        <td><%= admin_student.registration_file_size %></td>
-        <td><%= admin_student.registration_updated_at %></td>
-        <td><%= admin_student.person %></td>
+        <td><%= admin_student.person.name %></td>
+        <td><%= admin_student.person.phone %></td>
+        <td><%= admin_student.person.address %></td>
+        <td><%= admin_student.person.identity %></td>
+        <td><%= admin_student.person.cpf %></td>
+        <td><%= admin_student.person.birth %></td>
       <td class='actions text-center'>
         <%= link_to t('Show'), admin_student_path(admin_student), class: 'btn btn-sm btn-info' %>
         <%= link_to t('Edit'), edit_admin_student_path(admin_student), class: 'btn btn-sm btn-warning' %>

@@ -11,7 +11,7 @@
   <body>
     <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
-    <%= render 'layouts/side_bar' %>
+    <%= render 'layouts/side_bar' unless current_page?(new_user_registration_path) || current_page?(new_user_session_path) || current_page?(user_session_path) || current_page?(new_user_password_path) || current_page?(edit_user_password_path) || current_page?(user_password_path) || current_page?(edit_user_registration_path) || current_page?(user_registration_path) || current_page?(new_user_confirmation_path) || current_page?(user_confirmation_path) || current_page?(users_path) || current_page?(new_user_path)%> 
     <%= yield %>
   </body>
 </html>

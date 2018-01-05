@@ -1,0 +1,26 @@
+<div class='page-header'>
+  <h1>
+    <%= t('Admin::studentevent Info') %>
+    <div class='pull-right'>
+      <%= link_to edit_admin_student_event_path(@admin_student_event), class: 'btn btn-info' do %>
+        <i class='glyphicon glyphicon-pencil'></i> <%= t('Edit') %>
+      <% end %>
+      <%= link_to admin_student_events_path, class: 'btn btn-warning' do %>
+        <i class='glyphicon glyphicon-backward'></i> <%= t('Back') %>
+      <% end %>
+    </div>
+  </h1>
+</div>
+
+<div class='panel panel-default'>
+  <div class='panel-body'>
+    <p>
+      <strong>Student</strong>
+      <%= @admin_student_event.student_id %>
+    </p>
+    <p>
+      <strong>Event</strong>
+      <%= @admin_student_event.event_id %>
+    </p>
+  </div>
+</div>

@@ -15,6 +15,7 @@ class Admin::StudentsController < AdminController
   # GET /admin/students/new
   def new
     @admin_student = Student.new
+    @admin_student.build_person
   end
 
   # GET /admin/students/1/edit
@@ -31,7 +32,7 @@ class Admin::StudentsController < AdminController
         format.html { redirect_to @admin_student, notice: 'Student was successfully created.' }
         format.json { render :show, status: :created, location: @admin_student }
       else
-        format.html { render :new }
+        format.html { render new_admin_student_path}
         format.json { render json: @admin_student.errors, status: :unprocessable_entity }
       end
     end
@@ -69,6 +70,15 @@ class Admin::StudentsController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_student_params
-      params.require(:admin_student).permit(:registration_file_name, :registration_content_type, :registration_file_size, :registration_updated_at, :person_id)
+      params.require(:student).permit(:registration, person_attributes:[:name,
+                                                                              :phone,
+                                                                              :address,
+                                                                              :identity, 
+                                                                              :cpf,
+                                                                              :birth,
+                                                                              :id])
     end
 end
+
+
+

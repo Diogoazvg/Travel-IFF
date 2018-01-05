@@ -13,5 +13,8 @@ class StudentEvent < ApplicationRecord
   belongs_to :student
   belongs_to :event
 
+  validates :student, uniqueness: { scope: :event,
+    message: "O aluno não já está cadastrado nesse evento." }
+
   #resourcify
 end

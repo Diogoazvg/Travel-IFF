@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   namespace :admin do
+    resources :student_events
+  end
+  namespace :admin do
     resources :vehicles
     resources :students
     resources :people
