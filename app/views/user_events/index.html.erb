@@ -1,0 +1,36 @@
+<div class='page-header'>
+  <h1>
+    <%= t('Listing UserEvents') %> (<%= @count_user_events %>)  <small><%= @user_event %></small>
+    <div class='pull-right'>
+      <%= link_to new_user_event_path(), class: 'btn btn-info' do %>
+        <i class='glyphicon glyphicon-plus'></i> <%= t('New UserEvent') %>
+      <% end %>
+    </div>
+  </h1>
+</div>
+
+<table class='table table-responsive table-hover table-stripped' id='user_events'>
+  <thead>
+  <tr>
+      <th>User</th>
+      <th>Event</th>
+    <th></th>
+  </tr>
+
+  </thead>
+
+  <tbody>
+    <% @user_events.each do |user_event| %>
+    <tr>
+        <td><%= user_event.user.name %></td>
+        <td><%= user_event.event.name %></td>
+      <td class='actions text-center'>
+        <%= link_to t('Show'), user_event_path(user_event), class: 'btn btn-sm btn-info' %>
+        <%= link_to t('Edit'), edit_user_event_path(user_event), class: 'btn btn-sm btn-warning' %>
+        <%= link_to t('Destroy'), user_event_path(user_event), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<!--%%= paginate @user_events %-->

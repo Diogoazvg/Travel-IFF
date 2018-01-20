@@ -1,11 +1,11 @@
 <div class='page-header'>
   <h1>
-    <%= t('Admin::studentevent Info') %>
+    <%= t('Userevent Info') %>
     <div class='pull-right'>
-      <%= link_to edit_admin_student_event_path(@admin_student_event), class: 'btn btn-info' do %>
+      <%= link_to edit_user_event_path(@user_event), class: 'btn btn-info' do %>
         <i class='glyphicon glyphicon-pencil'></i> <%= t('Edit') %>
       <% end %>
-      <%= link_to admin_student_events_path, class: 'btn btn-warning' do %>
+      <%= link_to user_events_path, class: 'btn btn-warning' do %>
         <i class='glyphicon glyphicon-backward'></i> <%= t('Back') %>
       <% end %>
     </div>
@@ -15,12 +15,12 @@
 <div class='panel panel-default'>
   <div class='panel-body'>
     <p>
-      <strong>Student</strong>
-      <%= @admin_student_event.student_id %>
+      <strong>User</strong>
+      <%= @user_event.user.name %>
     </p>
     <p>
       <strong>Event</strong>
-      <%= @admin_student_event.event_id %>
+      <%= @user_event.event.name %>
     </p>
   </div>
 </div>

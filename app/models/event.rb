@@ -13,8 +13,7 @@
 
 class Event < ApplicationRecord
 	belongs_to :travel, inverse_of: :events
-	has_many :student_events
-	has_many :students, through: :student_events
+	has_many :users, through: :user_events
 
 	validates :travel_id, presence: true
 	validates :name, presence: true

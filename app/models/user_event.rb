@@ -1,20 +1,18 @@
 # == Schema Information
 #
-# Table name: student_events
+# Table name: user_events
 #
 #  id         :integer          not null, primary key
-#  student_id :integer
+#  user_id    :integer
 #  event_id   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class StudentEvent < ApplicationRecord
-  belongs_to :student
+class UserEvent < ApplicationRecord
+  belongs_to :user
   belongs_to :event
 
-  validates :student, uniqueness: { scope: :event,
+  validates :user, uniqueness: { scope: :event,
     message: "O aluno não já está cadastrado nesse evento." }
-
-  #resourcify
 end

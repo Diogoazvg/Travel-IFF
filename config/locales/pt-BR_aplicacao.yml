@@ -67,14 +67,12 @@ pt-BR:
   Table_bus_company: Tabela de Empresas
   Table_driver: Tabela de Motoristas
   Table_event: Tabela de Eventos
-  Table_student: Tabela de Estudantes
   Table_travel: Tabela de Viagens
   Table_vehicle: Tabela de Veículos
 
   Name_event: "Nome: "
   Day_event: "Data: "
   Description_event: "Descrição: "
-  student_name: "Nome: "
   order_number: "Numero de Ordem: "
   seat: "Lugares: "
   Empresa: "Empresa: "
@@ -144,7 +142,6 @@ pt-BR:
     models:
       
       travel: Viagem
-      student: Estudante
       driver: Motorista
       vehicles: Veículos
       companies: Empresas

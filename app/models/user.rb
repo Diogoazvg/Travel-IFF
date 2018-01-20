@@ -8,7 +8,7 @@
 #  reset_password_token   :string
 #  reset_password_sent_at :datetime
 #  remember_created_at    :datetime
-#  sign_in_count          :integer          default("0"), not null
+#  sign_in_count          :integer          default(0), not null
 #  current_sign_in_at     :datetime
 #  last_sign_in_at        :datetime
 #  current_sign_in_ip     :inet
@@ -20,6 +20,11 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  admin                  :boolean
+#  name                   :string
+#  phone                  :string
+#  rg                     :string
+#  cpf                    :string
+#  birthday               :date
 #
 
 class User < ApplicationRecord
@@ -27,4 +32,5 @@ class User < ApplicationRecord
   #:lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable 
+  has_many :events, through: :user_events      
 end

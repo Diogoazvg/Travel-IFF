@@ -1,11 +1,12 @@
-<%= simple_form_for [:admin, @admin_student_event], wrapper: :horizontal_form do |f| %>
+<%= simple_form_for @user_event, wrapper: :horizontal_form do |f| %>
   <%= f.error_notification %>
 <div class="form-horizontal col-sm-offset-1 col-sm-7">
   <div class="panel panel-info">
-  <div class="panel-heading ">Table_name</div>
+  <div class="panel-heading ">Cadastro de eventos</div>
     <div class="panel-body">
       <div class="form-inputs">
-          <%= f.association :student %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <!--%= f.association :user %-->
           <%= f.association :event %>
       </div>
 

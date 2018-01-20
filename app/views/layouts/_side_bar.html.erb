@@ -12,8 +12,8 @@
                     <i>
                       <% if current_user.try(:admin?) %>
                         <%= link_to t("Travels"), admin_travels_path, class: 'fa fa-plane fa-lg' %>
-                      <% else %>
-                        <%= link_to t("Travels"), travels_path, class: 'fa fa-plane fa-lg' %>
+                      <!--% else %-->
+                        <!--%= link_to t("Travels"), travels_path, class: 'fa fa-plane fa-lg' %-->
                       <% end %>                        
                     </i>
                   </a>
@@ -31,26 +31,10 @@
                   </a>
                   </li>
 
-                 <li>
-                  <a>
-                    <i>
-                      <% if current_user.try(:admin?) %>
-                        <%= link_to t("Students"), admin_students_path, class: 'fa fa-graduation-cap fa-lg' %>
-                      <!--% else %-->
-                        <!--%= link_to t("Students"), students_path, class: 'fa fa-users fa-lg' %-->
-                      <% end %>
-                    </i>
-                  </a>
-                </li>
-
                 <li>
                   <a>
                     <i>
-                      <% if current_user.try(:admin?) %>
-                        <%= link_to t("Student_events"), admin_student_events_path, class: 'fa fa-calendar fa-lg' %>
-                      <!--% else %-->
-                        <!--%= link_to t("Students"), students_path, class: 'fa fa-users fa-lg' %-->
-                      <% end %>
+                        <%= link_to t("  Cadastar em Evento"), user_events_path, class: 'fa fa-calendar fa-lg' %>
                     </i>
                   </a>
                 </li>
@@ -95,7 +79,7 @@
                   <a>
                     <i>
                       <% if current_user.try(:admin?) %>
-                        <%= link_to t(" Usuários"), users_path, class: 'fa fa-building-o fa-lg' %>
+                        <%= link_to t(" Usuários"), users_path, class: 'fa fa-users fa-lg' %>
                       <% end %>
                     </i>
                   </a>
