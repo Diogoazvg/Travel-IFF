@@ -25,6 +25,7 @@ pt-BR:
   Email: "E-mail:"
   Admin: "Administrador:"
   Editing User: Usuário
+  Didn't receive confirmation instructions?: Se não recebeu seu email de confirmação clique aqui
 
   travel: "Viagem:"
   Person: "Pessoa:"
@@ -229,7 +230,11 @@ pt-BR:
         description: "Descrição: "
 
       user_event:
-        event: evento  
+        event: evento
+
+      user:
+        phone: Telefone
+        birthday: Nascimento   
 
     pagination:
       truncate: "truncar"

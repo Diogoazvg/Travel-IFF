@@ -32,5 +32,10 @@ class User < ApplicationRecord
   #:lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable 
-  has_many :events, through: :user_events      
+  has_many :events, through: :user_events
+
+  validates :cpf, presence: true
+  validates :cpf, uniqueness: true#, on: :new
+  validates :rg, presence: true
+  validates :rg, uniqueness: true#, on: :new      
 end
