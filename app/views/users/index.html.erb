@@ -2,8 +2,8 @@
   <h1>
     <%= t('Listing Users') %> (<%= @count_users %>)  <small><%= @user %></small>
     <div class='pull-right'>
-      <%= link_to new_user_path(), class: 'btn btn-info' do %>
-        <i class='glyphicon glyphicon-plus'></i> <%= t('New User') %>
+      <%= link_to :back, class: 'btn btn-warning' do %>
+        <i class='glyphicon glyphicon-backward'></i> <%= t('Back') %>
       <% end %>
     </div>
   </h1>
