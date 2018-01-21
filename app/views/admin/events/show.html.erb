@@ -15,20 +15,20 @@
 <div class='panel panel-default'>
   <div class='panel-body'>
     <p>
-      <strong>Name</strong>
+      <strong><%=t("Name")%></strong>
       <%= @admin_event.name %>
     </p>
     <p>
-      <strong>Day</strong>
+      <strong><%=t("Day")%></strong>
       <%= @admin_event.day %>
     </p>
     <p>
-      <strong>Descrption</strong>
+      <strong><%=t("Description")%></strong>
       <%= @admin_event.description %>
     </p>
     <p>
-      <strong>Travel</strong>
-      <%= @admin_event.travel %>
+      <strong><%=t("travel")%></strong>
+      <%= @admin_event.travel.name %>
     </p>
   </div>
 </div>

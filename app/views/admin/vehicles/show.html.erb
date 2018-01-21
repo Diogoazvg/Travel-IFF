@@ -15,24 +15,24 @@
 <div class='panel panel-default'>
   <div class='panel-body'>
     <p>
-      <strong>Seat</strong>
+      <strong><%=t("Seat")%></strong>
       <%= @admin_vehicle.seat %>
     </p>
     <p>
-      <strong>Price</strong>
+      <strong><%=t("Price")%></strong>
       <%= @admin_vehicle.price %>
     </p>
     <p>
-      <strong>Order number</strong>
+      <strong><%=t("OrderNumber")%></strong>
       <%= @admin_vehicle.order_number %>
     </p>
     <p>
-      <strong>Travel</strong>
-      <%= @admin_vehicle.travel %>
+      <strong><%=t("travel")%></strong>
+      <%= @admin_vehicle.travel.name %>
     </p>
     <p>
-      <strong>Bus company</strong>
-      <%= @admin_vehicle.bus_company %>
+      <strong><%=t("Bus company")%></strong>
+      <%= @admin_vehicle.bus_company.name %>
     </p>
   </div>
 </div>

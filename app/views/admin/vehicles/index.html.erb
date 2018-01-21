@@ -12,11 +12,11 @@
 <table class='table table-responsive table-hover table-stripped' id='admin_vehicles'>
   <thead>
   <tr>
-      <th>Seat</th>
-      <th>Price</th>
-      <th>OrderNumber</th>
-      <th>Travel</th>
-      <th>BusCompany</th>
+      <th><%=t("Seat")%></th>
+      <th><%=t("Price")%></th>
+      <th><%=t("OrderNumber")%></th>
+      <th><%=t("travel")%></th>
+      <th><%=t("BusCompany")%></th>
     <th></th>
   </tr>
 
@@ -28,8 +28,8 @@
         <td><%= admin_vehicle.seat %></td>
         <td><%= admin_vehicle.price %></td>
         <td><%= admin_vehicle.order_number %></td>
-        <td><%= admin_vehicle.travel %></td>
-        <td><%= admin_vehicle.bus_company %></td>
+        <td><%= admin_vehicle.travel.name %></td>
+        <td><%= admin_vehicle.bus_company.name %></td>
       <td class='actions text-center'>
         <%= link_to t('Show'), admin_vehicle_path(admin_vehicle), class: 'btn btn-sm btn-info' %>
         <%= link_to t('Edit'), edit_admin_vehicle_path(admin_vehicle), class: 'btn btn-sm btn-warning' %>

@@ -1,4 +1,38 @@
 pt-BR:
+  Listing Admin::Travels: Listagem de Viagens
+  New Admin::Travel: Cadastrar Viagem
+  Admin::travel Info: Viagem
+  Listing Admin::Events: Listagens de Viagens
+  New Admin::Event: Cadastrar Evento
+  Admin::event Info: Evento
+  Listing UserEvents: Listagem Usuários/Evento
+  New UserEvent: Cadastar Evento
+  Userevent Info: Usuário/Evento
+  Editing User Event: Editar Usuário/Evento
+  Listing Admin::Drivers: Listagem de Motoristas
+  New Admin::Driver: Cadastrar Motorista
+  Admin::driver Info: Motorista
+  Listing Admin::Vehicles: Listagem de Veículos
+  New Admin::Vehicle: Cadastrar Veículo
+  Editing Admin::Vehicle: Veículo
+  Editing Admin::BusCompany: Empresas
+  Listing Admin::BusCompanies: Listagem de Empresas
+  New Admin::BusCompany: Cadastrar Empresa
+  New Admin::BusCompany: Cadastrar Empresa
+  Admin::buscompany Info: Empresa
+  Listing Users: Listagem de Usuários
+  User Info: Usuário
+  Email: "E-mail:"
+  Admin: "Administrador:"
+  Editing User: Usuário
+
+  travel: "Viagem:"
+  Person: "Pessoa:"
+
+  helpers:
+    submit:
+      user_event:
+        update: "Atualizar"
 
   Start Bootstrap: Controle de Viagem
 
@@ -54,14 +88,14 @@ pt-BR:
   Back: Voltar
   Image: Imagem
   Travel_name: Nome da Viagem
-  Event: Evento
-  Driver: Motorista
+  Event: "Evento:"
+  Driver: "Motorista:"
   Student: Estudante
   Travels: "  Viagens"
   Events: "  Eventos"
   Students: "  Estudantes"
   Drivers: "  Motoristas"
-  Vehicle: "  Veículos"
+  Vehicle: "  Veículos:"
   Bus Company: "  Empresas"
 
   Table_bus_company: Tabela de Empresas
@@ -73,9 +107,9 @@ pt-BR:
   Name_event: "Nome: "
   Day_event: "Data: "
   Description_event: "Descrição: "
-  order_number: "Numero de Ordem: "
+  OrderNumber: "Numero de Ordem: "
   seat: "Lugares: "
-  Empresa: "Empresa: "
+  BusCompany: "Empresa: "
 
   Contact Me: Contato
   Name: Nome
@@ -162,6 +196,7 @@ pt-BR:
         birth: "Data de Nascimento: "
       
       driver:
+        person: Pessoa
         cnh: "CNH: "
         category: "Categoria: "
         vehicle: "Veículo: "
@@ -192,6 +227,9 @@ pt-BR:
         name: "Nome da Viagem: "
         day: "Data: "
         description: "Descrição: "
+
+      user_event:
+        event: evento  
 
     pagination:
       truncate: "truncar"
