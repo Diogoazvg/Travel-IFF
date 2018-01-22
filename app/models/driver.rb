@@ -25,7 +25,9 @@ class Driver < ApplicationRecord
 	validates :vehicle_id, presence: true
 	validates :name, presence: true
 	validates :rg, presence: true
+	validates :rg, uniqueness: true
 	validates :cpf, presence: true
+	validates :cpf, uniqueness: true
 
 	accepts_nested_attributes_for :person
 
