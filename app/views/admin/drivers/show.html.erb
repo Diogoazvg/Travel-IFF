@@ -15,19 +15,27 @@
 <div class='panel panel-default'>
   <div class='panel-body'>
     <p>
-      <strong><%t("Cnh")%></strong>
+      <strong><%=t("Name")%></strong>
+      <%= @admin_driver.name %>
+    </p>
+    <p>
+      <strong><%=t("Cnh")%></strong>
       <%= @admin_driver.cnh %>
     </p>
     <p>
-      <strong><%t("Category")%></strong>
+      <strong><%=t("Category")%></strong>
       <%= @admin_driver.category %>
     </p>
     <p>
-      <strong><%t("Person")%></strong>
-      <%= @admin_driver.person %>
+      <strong><%=t("Rg")%></strong>
+      <%= @admin_driver.rg %>
     </p>
     <p>
-      <strong><%t("Vehicle")%></strong>
+      <strong><%=t("Cpf")%></strong>
+      <%= @admin_driver.cpf %>
+    </p>
+    <p>
+      <strong><%=t("Vehicle")%></strong>
       <%= @admin_driver.vehicle %>
     </p>
   </div>

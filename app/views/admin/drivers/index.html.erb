@@ -12,9 +12,11 @@
 <table class='table table-responsive table-hover table-stripped' id='admin_drivers'>
   <thead>
   <tr>
+      <th><%=t("name")%></th>
       <th><%=t("Cnh")%></th>
       <th><%=t("Category")%></th>
-      <th><%=t("Person")%></th>
+      <th><%=t("rg")%></th>
+      <th><%=t("cpf")%></th>
       <th><%=t("Vehicle")%></th>
     <th></th>
   </tr>
@@ -24,9 +26,11 @@
   <tbody>
     <% @admin_drivers.each do |admin_driver| %>
     <tr>
+        <td><%= admin_driver.name %></td>
         <td><%= admin_driver.cnh %></td>
         <td><%= admin_driver.category %></td>
-        <td><%= admin_driver.person %></td>
+        <td><%= admin_driver.rg %></td>
+        <td><%= admin_driver.cpf %></td>
         <td><%= admin_driver.vehicle %></td>
       <td class='actions text-center'>
         <%= link_to t('Show'), admin_driver_path(admin_driver), class: 'btn btn-sm btn-info' %>

@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180119223120) do
+ActiveRecord::Schema.define(version: 20180122174308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admin_student_events", force: :cascade do |t|
+    t.integer  "student_id"
+    t.integer  "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "bus_companies", force: :cascade do |t|
     t.string   "cnpj"
@@ -29,6 +36,9 @@ ActiveRecord::Schema.define(version: 20180119223120) do
     t.string   "category"
     t.integer  "person_id"
     t.integer  "vehicle_id"
+    t.string   "name"
+    t.string   "rg"
+    t.string   "cpf"
     t.index ["person_id"], name: "index_drivers_on_person_id", using: :btree
     t.index ["vehicle_id"], name: "index_drivers_on_vehicle_id", using: :btree
   end

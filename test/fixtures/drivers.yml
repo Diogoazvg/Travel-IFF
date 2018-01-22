@@ -9,6 +9,9 @@
 #  category   :string
 #  person_id  :integer
 #  vehicle_id :integer
+#  name       :string
+#  rg         :string
+#  cpf        :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

@@ -9,6 +9,9 @@
 #  category   :string
 #  person_id  :integer
 #  vehicle_id :integer
+#  name       :string
+#  rg         :string
+#  cpf        :string
 #
 
 require 'test_helper'

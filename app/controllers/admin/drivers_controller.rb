@@ -28,7 +28,7 @@ class Admin::DriversController < AdminController
 
     respond_to do |format|
       if @admin_driver.save
-        format.html { redirect_to @admin_driver, notice: 'Driver was successfully created.' }
+        format.html { redirect_to new_admin_driver_path, notice: t('Driver was successfully created.') }
         format.json { render :show, status: :created, location: @admin_driver }
       else
         format.html { render :new }
@@ -69,6 +69,6 @@ class Admin::DriversController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_driver_params
-      params.require(:admin_driver).permit(:cnh, :category, :person_id, :vehicle_id)
+      params.require(:driver).permit(:cnh, :category, :name, :rg, :cpf, :vehicle_id)
     end
 end

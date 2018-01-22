@@ -9,6 +9,9 @@
 #  category   :string
 #  person_id  :integer
 #  vehicle_id :integer
+#  name       :string
+#  rg         :string
+#  cpf        :string
 #
 
 class Driver < ApplicationRecord
@@ -20,7 +23,9 @@ class Driver < ApplicationRecord
 	validates :cnh, numericality: true
 	validates :category, presence: true
 	validates :vehicle_id, presence: true
-	validates :person, presence: true
+	validates :name, presence: true
+	validates :rg, presence: true
+	validates :cpf, presence: true
 
 	accepts_nested_attributes_for :person
 
