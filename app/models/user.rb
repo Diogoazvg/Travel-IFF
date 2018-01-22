@@ -37,5 +37,8 @@ class User < ApplicationRecord
   validates :cpf, presence: true
   validates :cpf, uniqueness: true#, on: :new
   validates :rg, presence: true
-  validates :rg, uniqueness: true#, on: :new      
+  validates :rg, uniqueness: true#, on: :new 
+  validates_each :cpf do |record, attr, value|
+      record.errors.add(attr, 'não é válido') unless CpfUtils.cpf_valido? value
+    end     
 end
