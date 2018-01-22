@@ -6,9 +6,9 @@ jQuery ->
   # Drivers
   $("#driver_person_attributes_phone").inputmask(
     { mask: ['(99) 999999999'], removeMaskOnSubmit: true });
-  $("#driver_person_attributes_identity").inputmask(
-    { mask: ['99999999-9'], removeMaskOnSubmit: true });
-  $("#driver_person_attributes_cpf").inputmask(
+  $("#driver_cnh").inputmask(
+    { mask: ['99999999999'], removeMaskOnSubmit: true });
+  $("#driver_cpf").inputmask(
     { mask: ['999.999.999-99'], removeMaskOnSubmit: true });
   $("#driver_category").inputmask(
     { mask: ['(A)'], removeMaskOnSubmit: true });
