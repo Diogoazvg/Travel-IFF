@@ -34,12 +34,10 @@ ActiveRecord::Schema.define(version: 20180122174308) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "category"
-    t.integer  "person_id"
     t.integer  "vehicle_id"
     t.string   "name"
     t.string   "rg"
     t.string   "cpf"
-    t.index ["person_id"], name: "index_drivers_on_person_id", using: :btree
     t.index ["vehicle_id"], name: "index_drivers_on_vehicle_id", using: :btree
   end
 
@@ -51,17 +49,6 @@ ActiveRecord::Schema.define(version: 20180122174308) do
     t.integer  "travel_id"
     t.text     "description"
     t.index ["travel_id"], name: "index_events_on_travel_id", using: :btree
-  end
-
-  create_table "people", force: :cascade do |t|
-    t.string   "name"
-    t.string   "phone"
-    t.string   "address"
-    t.string   "identity"
-    t.string   "cpf"
-    t.date     "birth"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "travels", force: :cascade do |t|
@@ -120,7 +107,6 @@ ActiveRecord::Schema.define(version: 20180122174308) do
     t.index ["travel_id"], name: "index_vehicles_on_travel_id", using: :btree
   end
 
-  add_foreign_key "drivers", "people"
   add_foreign_key "drivers", "vehicles"
   add_foreign_key "events", "travels"
   add_foreign_key "user_events", "events"
