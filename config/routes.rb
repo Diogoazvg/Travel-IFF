@@ -4,8 +4,7 @@ Rails.application.routes.draw do
     end
   namespace :admin do
     resources :vehicles
-      resources :people
-    resources :events
+        resources :events
     resources :drivers
     resources :bus_companies
     resources :travels
