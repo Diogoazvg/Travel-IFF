@@ -1,6 +1,6 @@
 <div class='page-header'>
   <h1>
-    <%= t('Listing Admin::Events') %> (<%= @count_admin_events %>)  <small><%= @admin_event %></small>
+    <%= t('Listing Admin::Events') %> (<%= @admin_events.count %>)  <small><%= @admin_event %></small>
     <div class='pull-right'>
       <%= link_to new_admin_event_path(), class: 'btn btn-info' do %>
         <i class='glyphicon glyphicon-plus'></i> <%= t('New Admin::Event') %>

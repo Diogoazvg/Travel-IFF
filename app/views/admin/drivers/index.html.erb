@@ -1,6 +1,6 @@
 <div class='page-header'>
   <h1>
-    <%= t('Listing Admin::Drivers') %> (<%= @count_admin_drivers %>)  <small><%= @admin_driver %></small>
+    <%= t('Listing Admin::Drivers') %> (<%= @admin_drivers.count %>)  <small><%= @admin_driver %></small>
     <div class='pull-right'>
       <%= link_to new_admin_driver_path(), class: 'btn btn-info' do %>
         <i class='glyphicon glyphicon-plus'></i> <%= t('New Admin::Driver') %>
