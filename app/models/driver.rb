@@ -28,6 +28,9 @@ class Driver < ApplicationRecord
 	validates :rg, uniqueness: true
 	validates :cpf, presence: true
 	validates :cpf, uniqueness: true
+	validates_each :cpf do |record, attr, value|
+    	record.errors.add(attr, 'não é válido') unless CpfUtils.cpf_valido? value
+  	end
 
 	accepts_nested_attributes_for :person
 
